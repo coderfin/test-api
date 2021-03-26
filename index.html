@@ -15,6 +15,12 @@
               "service-worker.js"
             );
             console.log("Worker Registered", registeredWorker);
+
+            new Array(10).forEach(() => {
+              fetch("https://coderfin.github.io/test-api/", { method: "POST" })
+                .then((response) => response.text())
+                .then(console.log);
+            });
           } catch (error) {
             console.error("Error", error);
           }
