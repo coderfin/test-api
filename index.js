@@ -6,7 +6,7 @@ if ("serviceWorker" in navigator) {
       );
       console.log("Worker Registered", registeredWorker);
 
-      new Array(10).forEach(() => {
+      new Array(10).fill().forEach(() => {
         console.log("here");
 
         fetch("https://coderfin.github.io/test-api/", { method: "POST" })
