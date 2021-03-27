@@ -8,9 +8,18 @@ registerRoute(
   /.*/,
   ({ request }) => {
     console.log(request);
-    return new Response(`Custom handler response.`);
+    return new Response(`Custom handler response. POST`);
   },
   "POST"
+);
+
+registerRoute(
+  /.*/,
+  ({ request }) => {
+    console.log(request);
+    return new Response(`Custom handler response. GET`);
+  },
+  "GET"
 );
 
 // self.addEventListener("fetch", (event) => {
